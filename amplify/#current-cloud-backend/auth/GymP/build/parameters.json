@@ -1,0 +1,75 @@
+{
+  "identityPoolName": "testAuthIdentityPool",
+  "allowUnauthenticatedIdentities": false,
+  "resourceNameTruncated": "gymp6d6300d1",
+  "userPoolName": "GymP",
+  "autoVerifiedAttributes": [
+    "phone_number"
+  ],
+  "mfaConfiguration": "OPTIONAL",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "GP-{####} 인증번호는 {####}입니다.",
+  "smsVerificationMessage": "GP-{####} 인증번호는 {####}입니다.",
+  "emailVerificationSubject": "Verification code: {####}",
+  "emailVerificationMessage": "Verification code: {####}",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [
+    "Requires Lowercase",
+    "Requires Numbers",
+    "Requires Symbols"
+  ],
+  "requiredAttributes": [
+    "birthdate",
+    "name",
+    "phone_number"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": "180",
+  "userpoolClientWriteAttributes": [],
+  "userpoolClientReadAttributes": [],
+  "userpoolClientLambdaRole": "GymP6d6300d1_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "sharedId": "6d6300d1",
+  "resourceName": "GymP",
+  "authSelections": "identityPoolAndUserPool",
+  "serviceName": "Cognito",
+  "usernameAttributes": [
+    "email"
+  ],
+  "useDefault": "manual",
+  "userPoolGroups": false,
+  "userPoolGroupList": [],
+  "adminQueries": false,
+  "thirdPartyAuth": false,
+  "authProviders": [],
+  "usernameCaseSensitive": false,
+  "useEnabledMfas": true,
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "dependsOn": [],
+  "triggers": "{}",
+  "hostedUI": true,
+  "parentStack": {
+    "Ref": "AWS::StackId"
+  },
+  "permissions": [],
+  "hostedUIDomainName": "gymp66892c24-66892c24",
+  "authProvidersUserPool": [],
+  "hostedUIProviderMeta": "[]",
+  "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://gymprivateserver.com/\"],\"LogoutURLs\":[\"https://gymprivateserver.com/\"]}"
+}

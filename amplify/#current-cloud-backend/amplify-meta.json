@@ -1,0 +1,84 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gymp-staging-52116-authRole",
+      "UnauthRoleArn": "arn:aws:iam::370870007882:role/amplify-gymp-staging-52116-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::370870007882:role/amplify-gymp-staging-52116-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-gymp-staging-52116-deployment",
+      "UnauthRoleName": "amplify-gymp-staging-52116-unauthRole",
+      "StackName": "amplify-gymp-staging-52116",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:370870007882:stack/amplify-gymp-staging-52116/32ee6000-d5f9-11ee-9eb6-02c8f02692fd",
+      "AmplifyAppId": "d23qk344ylv3tf"
+    }
+  },
+  "auth": {
+    "GymP": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OPTIONAL",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ]
+        },
+        "signupAttributes": [
+          "BIRTHDATE",
+          "NAME",
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::370870007882:role/sns6d6300d152116-staging",
+        "UserPoolId": "ap-northeast-2_Ygi7yuERr",
+        "AppClientIDWeb": "27bu3ncb7rvghc0gjdt6sjfr4d",
+        "AppClientID": "5ldcgges9h1bjo2tmhs96689fn",
+        "IdentityPoolId": "ap-northeast-2:a670b6d6-5ab5-4d69-b713-642c9cea941b",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:370870007882:userpool/ap-northeast-2_Ygi7yuERr",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "GymP",
+        "HostedUIDomain": "gymp66892c24-66892c24-staging",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://gymprivateserver.com/\"],\"LogoutURLs\":[\"https://gymprivateserver.com/\"]}"
+      },
+      "lastPushTimeStamp": "2024-03-05T07:31:11.125Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-gymp-staging-52116-deployment/amplify-cfn-templates/auth/GymP-cloudformation-template.json",
+        "logicalId": "authGymP"
+      },
+      "lastPushDirHash": "WuPMeiBZwvJMTB81sqgpPaB+c4k="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "GymP",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2024-03-05T07:28:53.437Z"
+    }
+  }
+}

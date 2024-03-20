@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "짐프라이빗",
+    "slug": "PrivateGym",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+        "image": "./assets/splash1.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+      },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.lifepalette.privategym"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
